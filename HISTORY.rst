@@ -64,6 +64,13 @@ Release History
   embedded as a shape on a slide. The OLE object is represented as an icon.
 
 
+
+0.6.18.2 (2019-12-09)
++++++++++++++++++++
+
+- Added StyleIndex param to _RowCollection.add() in order to avoid always copying the last row.
+
+
 0.6.18.1 (2019-12-09)
 +++++++++++++++++++
 
