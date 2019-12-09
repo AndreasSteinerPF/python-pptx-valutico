@@ -3,8 +3,8 @@ requires = ["setuptools>=61.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "python-pptx"
-authors = [{name = "Steve Canny", email = "stcanny@gmail.com"}]
+name = "python-pptx-valutico"
+authors = [{name = "Andreas Steiner", email = "a.steiner@valutico.com"}]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
@@ -35,10 +35,10 @@ readme = "README.rst"
 requires-python = ">=3.8"
 
 [project.urls]
-Changelog = "https://github.com/scanny/python-pptx/blob/master/HISTORY.rst"
+Changelog = "https://github.com/AndreasSteinerPF/python-pptx-valutico/blob/master/HISTORY.rst"
 Documentation = "https://python-pptx.readthedocs.io/en/latest/"
-Homepage = "https://github.com/scanny/python-pptx"
-Repository = "https://github.com/scanny/python-pptx"
+Homepage = "https://github.com/AndreasSteinerPF/python-pptx-valutico"
+Repository = "https://github.com/AndreasSteinerPF/python-pptx-valutico"
 
 [tool.black]
 line-length = 100

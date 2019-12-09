@@ -1,5 +1,7 @@
-*python-pptx* is a Python library for creating, reading, and updating PowerPoint (.pptx)
+*python-pptx-valutico* is a Python library for creating and updating PowerPoint (.pptx)
 files.
+
+Basically, this is https://github.com/scanny/python-pptx, just with support for row / col adding and removing.
 
 A typical use would be generating a PowerPoint presentation from dynamic content such as
 a database query, analytics output, or a JSON payload, perhaps in response to an HTTP

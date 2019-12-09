@@ -64,6 +64,13 @@ Release History
   embedded as a shape on a slide. The OLE object is represented as an icon.
 
 
+0.6.18.1 (2019-12-09)
++++++++++++++++++++
+
+- Add _RowCollection.add() and .remove()
+- Add _Columnollection.add() and .remove()
+
+
 0.6.18 (2019-05-02)
 +++++++++++++++++++
 
