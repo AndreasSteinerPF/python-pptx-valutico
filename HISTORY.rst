@@ -64,6 +64,11 @@ Release History
   embedded as a shape on a slide. The OLE object is represented as an icon.
 
 
+0.6.18.3 (2019-12-09)
++++++++++++++++++++
+
+- Fix for _RowCollection.add() to not remove text by default, in order to keep text_frame and thus styling.
+
 
 0.6.18.2 (2019-12-09)
 +++++++++++++++++++
