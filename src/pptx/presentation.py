@@ -112,7 +112,6 @@ class Presentation(PartElementProxy):
         self.part.rename_slide_parts([cast("CT_SlideId", sldId).rId for sldId in sldIdLst])
         return Slides(sldIdLst, self)
 
-    @property
     def move_slide(self, newID: int, currID: int) -> None:
         slideIDs = self.slides._sldIdLst
         slideList = list(slideIDs)

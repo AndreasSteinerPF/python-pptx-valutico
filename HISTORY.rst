@@ -64,6 +64,12 @@ Release History
   embedded as a shape on a slide. The OLE object is represented as an icon.
 
 
+0.6.18.5 (2019-12-18)
++++++++++++++++++++
+
+- Removed @property from 'move_slide()' in order to fix some important edge cases.
+
+
 0.6.18.4 (2019-12-18)
 +++++++++++++++++++
 
