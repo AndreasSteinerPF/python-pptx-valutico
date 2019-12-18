@@ -64,6 +64,12 @@ Release History
   embedded as a shape on a slide. The OLE object is represented as an icon.
 
 
+0.6.18.4 (2019-12-18)
++++++++++++++++++++
+
+- Added 'move_slide()' property to presentation in order to allow moving a slide from one index to another.
+
+
 0.6.18.3 (2019-12-09)
 +++++++++++++++++++
 
