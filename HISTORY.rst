@@ -41,6 +41,10 @@ Release History
 - fix: #762 AttributeError: module 'collections' has no attribute 'abc'
        (Windows Python 3.10+)
 
+0.6.21.1 (2022-05-16)
++++++++++++++++++++
+
+- Expand namespaces in ns.py to allow a wider variety of shapes to be used.
 
 0.6.21 (2021-09-20)
 +++++++++++++++++++
