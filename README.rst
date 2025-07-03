@@ -1,7 +1,10 @@
 *python-pptx-valutico* is a Python library for creating and updating PowerPoint (.pptx)
 files.
 
-Basically, this is https://github.com/scanny/python-pptx, just with support for row / col adding and removing.
+Basically, this is https://github.com/scanny/python-pptx, just with:
+- support for row / column adding and removing
+- support for copying and moving slides
+- expanded XML namespaces to allow for a wider variety of shapes.
 
 A typical use would be generating a PowerPoint presentation from dynamic content such as
 a database query, analytics output, or a JSON payload, perhaps in response to an HTTP
