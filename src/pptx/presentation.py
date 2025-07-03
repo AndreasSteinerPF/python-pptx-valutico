@@ -6,7 +6,7 @@ import copy
 from typing import IO, TYPE_CHECKING, cast
 
 from pptx.shared import PartElementProxy
-from pptx.slide import SlideMasters, Slides
+from pptx.slide import Slide, SlideMasters, Slides
 from pptx.util import lazyproperty
 
 if TYPE_CHECKING:
@@ -115,26 +115,32 @@ class Presentation(PartElementProxy):
         return Slides(sldIdLst, self)
 
     def move_slide(self, newID: int, currID: int) -> None:
-        slideIDs = self.slides._sldIdLst
+        slideIDs = self.slides._sldIdLst  # pyright: ignore[reportPrivateUsage]
         slideList = list(slideIDs)
         slideIDs.remove(slideList[currID])
-        slideIDs.insert(newID, slideList[currID])
+        slideIDs.insert(newID, slideList[currID])  # pyright: ignore[reportUnknownMemberType,reportAttributeAccessIssue]
 
-    def copy_slide(self, source_index, target_index):
-        # Append slide with source's layout. Then delete shapes to get a blank slide
+    def copy_slide(self, source_index: int, target_index: int) -> Slide:
+        """Append slide with source's layout. Then delete shapes to get a blank slide"""
         source = self.slides[source_index]
         dest = self.slides.add_slide(source.slide_layout)
         for shp in dest.shapes:
-            shp.element.getparent().remove(shp.element)
+            parent = shp.element.getparent()
+            if parent:
+                parent.remove(shp.element)
+
         # Copy shapes from source, in order
         for shape in source.shapes:
             new_shape = copy.deepcopy(shape.element)
-            dest.shapes._spTree.insert_element_before(new_shape, "p:extLst")
+            dest.shapes._spTree.insert_element_before(new_shape, "p:extLst")  # pyright: ignore[reportPrivateUsage]
+
         # Copy rels from source
-        for rel in source.part.rels:
-            _rels: _Relationships = dest.part.rels
+        for rel_key in source._part.rels:
+            rel = source._part.rels[rel_key]
+            _rels: _Relationships = dest._part.rels
             if rel.is_external:
-                _rels.get_or_add_ext_rel(rel.reltype, rel._target)
+                _rels.get_or_add_ext_rel(rel.reltype, rel._target)  # pyright: ignore[reportArgumentType,reportPrivateUsage] # noqa
+
         # Move appended slide into target_index
-        self.slides.element.insert(target_index, self.slides.element[-1])
+        self.slides.element.insert(target_index, self.slides.element[-1])  # pyright: ignore[reportUnknownMemberType,reportAttributeAccessIssue] # noqa
         return dest

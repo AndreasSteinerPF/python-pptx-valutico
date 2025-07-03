@@ -12,3 +12,5 @@ _scratch/
 tags
 /tests/debug.py
 .idea
+.venv/
+venv/

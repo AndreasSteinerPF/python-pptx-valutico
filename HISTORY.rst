@@ -2,10 +2,11 @@
 
 Release History
 ---------------
-0.6.24.3 (2023-05-18)
-+++++++++++++++++++
 
-- Fix issue with broken presentation after copy slide
+1.0.2.1 (2025-07-03)
+++++++++++++++++++
+
+- Bring upstream changes from python-pptx 1.0.2
 
 1.0.2 (2024-08-07)
 ++++++++++++++++++
@@ -45,10 +46,18 @@ Release History
 - fix: #762 AttributeError: module 'collections' has no attribute 'abc'
        (Windows Python 3.10+)
 
+
+0.6.21.2 (2023-05-18)
++++++++++++++++++++
+
+- Fix issue with broken presentation after copy slide
+
+
 0.6.21.1 (2022-05-16)
 +++++++++++++++++++
 
 - Expand namespaces in ns.py to allow a wider variety of shapes to be used.
+
 
 0.6.21 (2021-09-20)
 +++++++++++++++++++
