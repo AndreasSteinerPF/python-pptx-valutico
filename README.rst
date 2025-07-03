@@ -2,6 +2,7 @@
 files.
 
 Basically, this is https://github.com/scanny/python-pptx, just with:
+
 - support for row / column adding and removing
 - support for copying and moving slides
 - expanded XML namespaces to allow for a wider variety of shapes.
